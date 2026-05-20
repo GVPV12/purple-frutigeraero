@@ -1,0 +1,418 @@
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  EDITING GUIDE — RETRO-BLOG-GUIDE.txt
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ 
+==============================================================
+  STARWINDOW RETRO BLOG — EDITING GUIDE
+  File: RETRO-BLOG-GUIDE.txt
+==============================================================
+ 
+CONTENTS
+  1. File structure
+  2. Quick edits — text, name, links
+  3. Images (avatar, mascot, post thumbnails, art gallery)
+  4. Colors
+  5. Fonts
+  6. Music player — how to change the song
+  7. Tabs — where each section lives in the HTML
+  8. Adding a new blog post
+  9. Converting to .shtml for Nekoweb (step by step)
+ 10. Automation scripts (post-generator + RSS feed)
+ 11. Contact
+ 
+ 
+──────────────────────────────────────────────────
+  1. FILE STRUCTURE
+──────────────────────────────────────────────────
+ 
+  your-blog/
+  ├── index.html       ← all content lives here
+  ├── style.css        ← all visual styles
+  └── blog.js          ← tabs, player, lightbox, fallbacks
+ 
+Upload all three files to the same folder on your hosting.
+They must be in the same directory for links to work.
+ 
+ 
+──────────────────────────────────────────────────
+  2. QUICK EDITS — TEXT, NAME, LINKS
+──────────────────────────────────────────────────
+ 
+Open index.html in any text editor (Notepad, VS Code, etc.)
+Search (Ctrl+F) for the comment ★ change — every editable
+spot is marked with this comment.
+ 
+  SITE NAME (header title):
+    <div class="header-sitename">
+      <span class="star-deco">✦</span>
+      MY RETRO BLOG   ← change this text
+      <span class="star-deco">✦</span>
+    </div>
+ 
+  SITE URL (shown in titlebar):
+    <div class="tb-url">https://yourname.nekoweb.org</div>
+ 
+  HEADER DESCRIPTION:
+    <div class="header-desc">
+      welcome to my little corner of the internet! ♡<br>
+      i post about art, games, and life~
+    </div>
+ 
+  BADGES (colored labels in header):
+    <span class="badge b1">♡ lover</span>
+    Change the text. Change b1/b2/b3/b4/b5 to switch color.
+    Colors: b1=red, b2=blue, b3=green, b4=orange, b5=purple
+ 
+  FOOTER TEXT:
+    <div class="footer-copy">© 2025 MY BLOG · ALL RIGHTS RESERVED</div>
+    <div class="footer-made">made with ♡ on nekoweb</div>
+ 
+  MARQUEE TEXT (the scrolling strips):
+    Search for <marquee and change the text inside.
+ 
+  NAV TABS — to rename a tab:
+    <a ... onclick="switchTab('blog',this)">HOME</a>
+    Change HOME to whatever you want. Do NOT change 'blog' inside switchTab.
+ 
+ 
+──────────────────────────────────────────────────
+  3. IMAGES
+──────────────────────────────────────────────────
+ 
+Every image in this template uses this pattern:
+ 
+  <img class="icon-img" src="YOUR-IMAGE-URL" alt="description"
+       onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <span class="icon-fallback">🌟</span>
+ 
+  → Replace YOUR-IMAGE-URL with a direct link to your image (Imgur, your hosting, etc.)
+  → If the image fails to load, the emoji (🌟) shows automatically
+  → To change the fallback emoji, change the character inside <span class="icon-fallback">
+ 
+HOW TO GET AN IMGUR LINK:
+  1. Go to imgur.com → upload your image
+  2. Right-click the image → Copy image address
+  3. It should end in .jpg, .png, or .gif — paste that as src=""
+ 
+WHERE EACH IMAGE IS:
+ 
+  MASCOT (bouncing image in header left):
+    Search for: class="header-mascot"
+    Change the src on the <img> inside it.
+ 
+  HEADER RIGHT IMAGE (decorative PNG right side of header):
+    Search for: class="header-img-right"
+    Change the src on the <img> inside it.
+ 
+  AVATAR (profile card in sidebar):
+    Search for: class="pw-avatar"
+    Change the src on the <img> inside it.
+ 
+  SOCIAL ICON BUTTONS (sidebar):
+    Each <a class="pw-soc-btn"> has an <img> — change each src.
+ 
+  POST THUMBNAILS (blog tab):
+    Each post has a <div class="post-img pi-1"> (or pi-2, pi-3)
+    Change the src on the <img> inside each one.
+    pi-1/pi-2/pi-3 sets the background color if image fails.
+ 
+  ABOUT BANNER (about tab):
+    Search for: class="about-banner"
+ 
+  ART GALLERY (art tab):
+    Six <div class="art-item"> blocks — change src on each.
+ 
+  DIARY THUMBNAILS (diary tab):
+    Search for: class="diary-thumb"
+ 
+ 
+──────────────────────────────────────────────────
+  4. COLORS
+──────────────────────────────────────────────────
+ 
+Open style.css. At the very top you'll find :root { ... }
+These are CSS variables — change them once and the color
+updates everywhere on the page automatically.
+ 
+  :root {
+    --panel:     #f0e0ff;   ← panel/card background (light purple)
+    --panel2:    #f8f0ff;   ← panel secondary background
+    --border:    #b080e0;   ← panel borders
+    --border2:   #8050c0;   ← darker borders, headers
+    --accent:    #c080f8;   ← purple highlight color
+    --pink:      #f8b0d8;   ← pink elements
+    --pink2:     #e880b8;   ← darker pink
+    --blue:      #a0c8f8;   ← blue elements
+    --blue2:     #6090e0;   ← darker blue
+    --green-btn: #a8e090;   ← green buttons/tags
+    --green2:    #60a040;
+    --yellow:    #f8e870;   ← yellow tags
+    --text-dark: #2a0a4a;   ← main text color
+    --text-mid:  #5a2a8a;   ← secondary text
+    --text-light:#8a60b0;   ← subtle text
+    --shadow:    #7040a0;   ← panel drop shadows
+    --nav-top:   #c890f8;   ← navigation gradient top
+    --nav-bot:   #9050d8;   ← navigation gradient bottom
+  }
+ 
+BACKGROUND GRADIENT:
+  In style.css search for: radial-gradient(ellipse at 20%
+  Change the hex colors in those lines to change the page background.
+ 
+HEADER GRADIENT:
+  Search for: .site-header {
+  Change the colors in: background: linear-gradient(180deg, ...)
+ 
+ 
+──────────────────────────────────────────────────
+  5. FONTS
+──────────────────────────────────────────────────
+ 
+Two Google Fonts are loaded at the top of style.css:
+  @import url('...VT323...Press+Start+2P...');
+ 
+  VT323           — used for body text, descriptions, post excerpts
+  Press Start 2P  — used for titles, buttons, panel headers
+ 
+To change fonts:
+  1. Go to fonts.google.com, pick a font, click "Get font" → "Get embed code"
+  2. Copy the @import line and replace the one at the top of style.css
+  3. In style.css search for: font-family: 'VT323'
+     Replace with your new font name
+  4. Do the same for: font-family: 'Press Start 2P'
+ 
+ 
+──────────────────────────────────────────────────
+  6. MUSIC PLAYER — HOW TO CHANGE THE SONG
+──────────────────────────────────────────────────
+ 
+The player uses the SoundCloud Widget API — no files needed,
+it streams directly from SoundCloud for free.
+ 
+STEP 1 — Find the iframe in index.html:
+  <iframe id="sc-player-rb"
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ARTIST/TRACK-NAME&auto_play=true..."
+ 
+STEP 2 — Get your SoundCloud track URL:
+  Go to the SoundCloud page of the song you want.
+  Copy the URL from your browser address bar.
+  Example: https://soundcloud.com/artist-name/track-name
+ 
+STEP 3 — URL-encode the track URL:
+  Replace each / with %2F and each : with %3A
+  Example:
+    Original:  https://soundcloud.com/artist/track
+    Encoded:   https%3A%2F%2Fsoundcloud.com%2Fartist%2Ftrack
+ 
+  Or use this free tool: https://www.urlencoder.org/
+  Paste your SoundCloud URL → click Encode → copy result
+ 
+STEP 4 — Replace the URL in the src:
+  src="https://w.soundcloud.com/player/?url=PASTE-ENCODED-URL-HERE&auto_play=true&..."
+ 
+STEP 5 — Update the track name shown in the player:
+  Search for: id="rb-track"
+  Change the text inside:
+  <div class="rb-track" id="rb-track">♪ your song name here</div>
+ 
+NOTE: Some SoundCloud tracks are restricted and can't be embedded.
+If silence plays, try a different version of the track or one
+uploaded directly by the artist's official account.
+ 
+ 
+──────────────────────────────────────────────────
+  7. TABS — WHERE EACH SECTION LIVES IN THE HTML
+──────────────────────────────────────────────────
+ 
+Each tab is a <div class="tab-pane" id="tab-NAME"> block.
+Only the one with class="tab-pane active" is visible at a time.
+ 
+  id="tab-blog"   ← HOME tab: your blog post cards
+  id="tab-about"  ← ABOUT tab: your about banner, text, facts list
+  id="tab-art"    ← ART tab: 6-slot image grid (lightbox enabled)
+  id="tab-diary"  ← DIARY tab: diary entry cards with thumbnails
+  id="tab-music"  ← MUSIC tab: your favorite songs list
+  id="tab-links"  ← LINKS tab: your social/external links
+ 
+To find a tab in the HTML:
+  Ctrl+F → search for id="tab-blog" (or whichever tab)
+ 
+To add a new tab:
+  1. In the nav bar, duplicate a <a class="nav-btn"> line
+     and change the text and the switchTab('NAME') value
+  2. In the main column, duplicate a <div class="tab-pane"> block
+     and change its id to tab-NAME (same NAME as step 1)
+ 
+ 
+──────────────────────────────────────────────────
+  8. ADDING A NEW BLOG POST MANUALLY
+──────────────────────────────────────────────────
+ 
+Find the section id="tab-blog" in index.html.
+Copy one of the existing <div class="panel"> post blocks
+and paste it before the others (newest first).
+ 
+Then edit:
+  • Date in <span style="...">June 14, 2025</span>
+  • Category class: post-cat art / post-cat gaming / post-cat life / post-cat music
+  • Post image src (and the pi-1/pi-2/pi-3 background class)
+  • Title text inside <div class="post-title-el"><a href="#">
+  • Excerpt text inside <div class="post-excerpt">
+  • The href on the <a> tag pointing to your full post page
+ 
+Also update the RECENT POSTS list in the sidebar:
+  Search for: class="recent-list"
+  Add a new <li class="recent-item"> at the top with title and date.
+ 
+ 
+──────────────────────────────────────────────────
+  9. CONVERTING TO .SHTML FOR NEKOWEB (STEP BY STEP)
+──────────────────────────────────────────────────
+ 
+.shtml (Server Side Includes) lets Nekoweb stitch multiple
+HTML files together automatically. This means you write the
+header, sidebar, and footer once and reuse them across all
+pages — no copy-pasting.
+ 
+STEP 1 — Create the folder structure on Nekoweb:
+  your-site/
+  ├── index.shtml          ← your main page
+  ├── style.css
+  ├── blog.js
+  ├── _parts/
+  │   ├── header.html
+  │   ├── sidebar.html
+  │   └── footer.html
+  └── posts/
+      └── (your post pages will go here)
+ 
+STEP 2 — Split your index.html into parts:
+  Open index.html and cut:
+  → From <!DOCTYPE html> to the end of </nav> (closing nav tag)
+    Paste into _parts/header.html
+  → The sidebar <div class="sidebar"> ... </div>
+    Paste into _parts/sidebar.html
+  → The footer <div class="site-footer"> ... </div> and the two
+    <script> tags at the bottom, and the lightbox div
+    Paste into _parts/footer.html
+ 
+STEP 3 — Create index.shtml:
+  Rename index.html to index.shtml
+  Replace the cut sections with include directives:
+ 
+  <!--#include virtual="/_parts/header.html" -->
+ 
+  <div class="two-col">
+    <div class="main-col">
+      ... your tab-pane content stays here ...
+    </div>
+  <!--#include virtual="/_parts/sidebar.html" -->
+  <!--#include virtual="/_parts/footer.html" -->
+ 
+STEP 4 — Update the CSS and JS links:
+  In _parts/header.html, make sure the <link> and <script>
+  tags use absolute paths:
+    <link rel="stylesheet" href="/style.css">
+  In _parts/footer.html:
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script src="/blog.js"></script>
+ 
+STEP 5 — Upload everything to Nekoweb and test.
+  Open your site URL. If the header or sidebar are missing,
+  double-check the virtual="" paths — they must start with /
+  and match the exact folder names on your site.
+ 
+STEP 6 — New pages:
+  For each new page (e.g. about.shtml, gallery.shtml):
+  Create a new .shtml file with the same three includes.
+  Only the content between the includes changes.
+ 
+ 
+──────────────────────────────────────────────────
+  10. AUTOMATION SCRIPTS
+──────────────────────────────────────────────────
+ 
+These are optional Python scripts. You need Python 3 installed
+on your computer. Download at: https://python.org
+ 
+NOTE: Due to how frequently hosting platforms and Python
+libraries update, these scripts may occasionally need minor
+adjustments. If you run into any issues, contact:
+greciavalentinapv@gmail.com
+ 
+────────────────────────
+  SCRIPT 1: post-generator.py
+  Adds a new post card to your index.html (or index.shtml)
+  automatically when you drop a post file in your posts/ folder.
+────────────────────────
+ 
+HOW IT WORKS:
+  You write your post as a simple .txt file in a posts/ folder.
+  The script reads it, generates the HTML post card, and inserts
+  it at the top of the post list in your index file.
+ 
+POST FILE FORMAT (save as posts/my-post-title.txt):
+ 
+  ---
+  title: My Post Title
+  date: 2025-06-20
+  category: art
+  image: https://i.imgur.com/your-image.jpg
+  emoji: 🎨
+  ---
+  Your post excerpt text goes here.
+  This is what shows on the blog index.
+ 
+SCRIPT: post-generator.py
+  (request the script by emailing greciavalentinapv@gmail.com
+   or ask for the script as an add-on when purchasing)
+ 
+HOW TO RUN:
+  1. Place post-generator.py in the root of your blog folder
+  2. Open a terminal/command prompt in that folder
+  3. Run: python post-generator.py posts/my-post-title.txt
+  4. The script updates index.html (or index.shtml) automatically
+  5. Upload the updated index file to your hosting
+ 
+WORKS WITH: plain HTML and .shtml equally.
+ 
+────────────────────────
+  SCRIPT 2: feed-generator.py
+  Generates and updates your RSS feed.xml automatically.
+────────────────────────
+ 
+RSS/Atom feeds let people subscribe to your blog using feed
+readers. Some hostings (like Nekoweb) also display them.
+ 
+HOW IT WORKS:
+  The script reads all .txt files in your posts/ folder
+  and generates a valid RSS 2.0 feed.xml file.
+ 
+HOW TO RUN:
+  1. Place feed-generator.py in the root of your blog folder
+  2. Edit the SITE_URL and BLOG_TITLE variables at the top of the script
+  3. Run: python feed-generator.py
+  4. It creates/updates feed.xml — upload it to your hosting root
+ 
+Add a link to your feed in _parts/header.html:
+  <link rel="alternate" type="application/rss+xml"
+        title="My Blog Feed" href="/feed.xml">
+ 
+WORKS WITH: plain HTML and .shtml equally.
+ 
+ 
+──────────────────────────────────────────────────
+  11. CONTACT
+──────────────────────────────────────────────────
+ 
+For custom setups, automation scripts, extra pages,
+color changes, or any help with this template:
+ 
+  Email: greciavalentinapv@gmail.com
+ 
+I'm a freelance web designer and developer. I can build
+a fully automated, custom version of this blog for you.
+ 
+==============================================================
+  END OF GUIDE — RETRO BLOG
+==============================================================

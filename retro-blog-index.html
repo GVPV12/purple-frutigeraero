@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Retro Blog</title>
+<link rel="stylesheet" href="retro-blog-style.css">
+</head>
+<body>
+
+<div class="cloud">☁</div>
+<div class="cloud">☁</div>
+<div class="cloud">☁</div>
+
+<div class="site-wrap">
+
+  <!-- ====== HEADER ====== -->
+  <div class="site-header">
+    <div class="site-titlebar">
+      <div class="tb-dots">
+        <div class="tb-dot r"></div>
+        <div class="tb-dot y"></div>
+        <div class="tb-dot g"></div>
+      </div>
+      <div class="tb-title">MY RETRO BLOG</div>
+      <div class="tb-url">https://yourname.nekoweb.org</div><!-- ★ change -->
+    </div>
+
+    <div class="header-content">
+      <!-- ★ Mascot — change src, emoji is fallback -->
+      <div class="header-mascot">
+        <img class="icon-img" src="icono.png" alt="mascot"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="icon-fallback">🌟</span>
+      </div>
+      <div class="header-text">
+        <div class="header-sitename">
+          <span class="star-deco">✦</span>
+          MY RETRO BLOG<!-- ★ change -->
+          <span class="star-deco">✦</span>
+        </div>
+        <div class="header-desc">
+          welcome to my little corner of the internet! ♡<br>
+          i post about art, games, and life~
+        </div><!-- ★ change -->
+        <div class="header-badges">
+          <span class="badge b1">♡ lover</span>
+          <span class="badge b2">pixel art</span>
+          <span class="badge b3">gamer</span>
+          <span class="badge b4">y2k fan</span>
+          <span class="badge b5">vtuber</span>
+        </div><!-- ★ change badges -->
+      </div>
+
+      <!-- ★ Change src to your PNG image, emoji is fallback -->
+<div class="header-img-right">
+  <img class="icon-img"
+       src="msn.png"
+       alt="header decoration"
+       onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+  <span class="icon-fallback">🌟</span>
+</div>
+
+    </div>
+
+      <!-- ★ Change marquee text -->
+  <div class="header-marquee">
+    <marquee scrollamount="3">
+      ✦ welcome to my blog ✦ digital art ✦ gaming ✦ y2k aesthetics ✦ eurobeat ✦ pixel art ✦ soft vibes ✦ .hack// ✦ vtuber ✦ she/her ✦
+    </marquee>
+  </div>
+
+    <nav class="nav-bar">
+      <span class="nav-label">▷</span>
+      <a href="#" class="nav-btn active" data-tab="blog"  onclick="switchTab('blog',this);  return false;">HOME</a>
+      <span class="nav-sep">·</span>
+      <a href="#" class="nav-btn"        data-tab="about" onclick="switchTab('about',this); return false;">ABOUT</a>
+      <span class="nav-sep">·</span>
+      <a href="#" class="nav-btn"        data-tab="art"   onclick="switchTab('art',this);   return false;">ART</a>
+      <span class="nav-sep">·</span>
+      <a href="#" class="nav-btn"        data-tab="diary" onclick="switchTab('diary',this); return false;">DIARY</a>
+      <span class="nav-sep">·</span>
+      <a href="#" class="nav-btn"        data-tab="music" onclick="switchTab('music',this); return false;">MUSIC</a>
+      <span class="nav-sep">·</span>
+      <a href="#" class="nav-btn"        data-tab="links" onclick="switchTab('links',this); return false;">LINKS</a>
+    </nav>
+  </div>
+
+  <!-- ====== BODY ====== -->
+  <div class="two-col">
+    <div class="main-col">
+
+      <!-- ══ TAB: BLOG ══ -->
+      <div class="tab-pane active" id="tab-blog">
+
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-icon">📝</span>
+            <span class="panel-title">BLOG POST</span>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 14, 2025</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.14</span><span class="post-cat art">✿ ART</span></div>
+            <!-- ★ Change src to your post image -->
+            <div class="post-img pi-1">
+              <img class="icon-img" src="mike.jpg" alt="post"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🎨</span>
+            </div>
+            <div class="post-title-el"><a href="#">finished my new character design !! (+ progress shots)</a></div>
+            <div class="post-excerpt">i've been working on this oc for like 3 weeks and she's finally done!! her name is luna and she's a magical girl who can control starlight~</div>
+            <div class="post-footer"><a href="#" class="retro-btn">READ MORE</a><span class="post-likes">♡ 84 · ★ 12</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-icon">📝</span>
+            <span class="panel-title">BLOG POST</span>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 10, 2025</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.10</span><span class="post-cat gaming">🎮 GAMING</span></div>
+            <div class="post-img pi-2">
+              <img class="icon-img" src="♡.jpg" alt="post"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🎮</span>
+            </div>
+            <div class="post-title-el"><a href="#">playing through all the .hack// games — part 1</a></div>
+            <div class="post-excerpt">ok so i finally started my .hack// playthrough and oh my god why did nobody tell me how good this series is???</div>
+            <div class="post-footer"><a href="#" class="retro-btn">READ MORE</a><span class="post-likes">♡ 56 · ★ 8</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-icon">📝</span>
+            <span class="panel-title">BLOG POST</span>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 5, 2025</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.05</span><span class="post-cat life">🌸 DIARY</span></div>
+            <div class="post-img pi-3">
+              <img class="icon-img" src="retro2.jpg" alt="post"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🌸</span>
+            </div>
+            <div class="post-title-el"><a href="#">june goals + my summer reading list ˚₊·</a></div>
+            <div class="post-excerpt">hi everyone!! i decided to make a little post about what i want to accomplish this month~ i have 5 books i want to finish...</div>
+            <div class="post-footer"><a href="#" class="retro-btn">READ MORE</a><span class="post-likes">♡ 103 · ★ 21</span></div>
+          </div>
+        </div>
+
+                <div class="panel">
+          <div class="panel-header">
+            <span class="panel-icon">📝</span>
+            <span class="panel-title">BLOG POST</span>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 5, 2025</span>
+          </div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.05</span><span class="post-cat life">🌸 DIARY</span></div>
+            <div class="post-img pi-3">
+              <img class="icon-img" src="retro.jpg" alt="post"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🌸</span>
+            </div>
+            <div class="post-title-el"><a href="#">june goals + my summer reading list ˚₊·</a></div>
+            <div class="post-excerpt">hi everyone!! i decided to make a little post about what i want to accomplish this month~ i have 5 books i want to finish...</div>
+            <div class="post-footer"><a href="#" class="retro-btn">READ MORE</a><span class="post-likes">♡ 103 · ★ 21</span></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="pagination">
+            <a href="#" class="page-btn">◀</a>
+            <a href="#" class="page-btn active">1</a>
+            <a href="#" class="page-btn">2</a>
+            <a href="#" class="page-btn">3</a>
+            <a href="#" class="page-btn">▶</a>
+          </div>
+        </div>
+
+      </div><!-- end tab-blog -->
+
+      <!-- ══ TAB: ABOUT ══ -->
+      <div class="tab-pane" id="tab-about">
+        <div class="panel">
+          <div class="panel-header"><span class="panel-icon">👤</span><span class="panel-title">ABOUT ME</span></div>
+          <div class="post-body">
+            <!-- ★ Change src to your banner -->
+            <div class="about-banner">
+              <img class="icon-img" src="gifabout.gif" alt="about"
+                   onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🌟</span>
+            </div>
+            <div class="about-text-block"><!-- ★ change -->
+              hi!! i'm a digital artist and content creator from somewhere cozy on the internet.
+              i love the early 2000s web aesthetic, pixel art, and anything that sparkles ✨
+            </div>
+            <ul class="about-facts-list">
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#c0a0f8,#8050d0)"></div>🎮 playing: .hack// infection</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#ffc0e8,#e060b0)"></div>📚 reading: Vampire Knight</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#a0e870,#50a830)"></div>🎵 obsessed with: eurobeat</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#ffe090,#d8a020)"></div>☁️ mood: soft & sparkly</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#a0d8ff,#3090e0)"></div>🌐 pronouns: she/her</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ TAB: ART ══ -->
+      <div class="tab-pane" id="tab-art">
+        <div class="panel">
+          <div class="panel-header">
+            <span class="panel-icon">🎨</span><span class="panel-title">ART GALLERY</span>
+            <span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">click to view full</span>
+          </div>
+          <div class="post-body">
+            <!-- ★ Change src on each slot (6 total) -->
+            <div class="art-grid">
+              <div class="art-item"><img class="icon-img" src="gallery (1).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🎨</span></div>
+              <div class="art-item"><img class="icon-img" src="gallery (2).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🌸</span></div>
+              <div class="art-item"><img class="icon-img" src="gallery (3).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">⭐</span></div>
+              <div class="art-item"><img class="icon-img" src="gallery (4).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🌙</span></div>
+              <div class="art-item"><img class="icon-img" src="gallery (5).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">💫</span></div>
+              <div class="art-item"><img class="icon-img" src="gallery (6).jpg" alt="art" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">✨</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ TAB: DIARY ══ -->
+      <div class="tab-pane" id="tab-diary">
+
+        <div class="panel">
+          <div class="panel-header"><span class="panel-icon">🌸</span><span class="panel-title">DIARY ENTRY</span><span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 12, 2025</span></div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.12</span><span class="post-cat life">🌸 DIARY</span></div>
+            <div class="post-title-el"><a href="#">a rainy afternoon and some thoughts</a></div>
+            <div class="diary-thumb dt-pink">
+              <img class="icon-img" src="diarypost.gif" alt="diary" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">🌸</span>
+            </div>
+            <div class="post-excerpt">it's been raining all day and i've been cozy inside with tea and my drawing tablet. finished a small sketch, listened to a lot of eurobeat...</div>
+            <a href="#" class="retro-btn">READ MORE</a>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel-header"><span class="panel-icon">🌸</span><span class="panel-title">DIARY ENTRY</span><span style="font-size:12px;color:rgba(255,255,255,.6);margin-left:auto;">June 3, 2025</span></div>
+          <div class="post-body">
+            <div class="post-meta"><span class="post-date">2025.06.03</span><span class="post-cat life">🌸 DIARY</span></div>
+            <div class="post-title-el"><a href="#">things i want to do this summer ☀️</a></div>
+            <div class="diary-thumb dt-blue">
+              <img class="icon-img" src="retro.jpg" alt="diary" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+              <span class="icon-fallback">☀️</span>
+            </div>
+            <div class="post-excerpt">made a little list of things i want to accomplish before september. finish 5 illustrations, beat .hack//, rewatch sailor moon...</div>
+            <a href="#" class="retro-btn">READ MORE</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ══ TAB: MUSIC ══ -->
+      <div class="tab-pane" id="tab-music">
+        <div class="panel">
+          <div class="panel-header"><span class="panel-icon">🎵</span><span class="panel-title">MUSIC I LOVE</span></div>
+          <div class="post-body">
+            <div class="about-text-block">a little collection of songs and albums that mean something to me ♪</div>
+            <ul class="about-facts-list">
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#a0d8ff,#3090e0)"></div>🎵 Butterfly — Smile.dk</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#c0a0f8,#8050d0)"></div>🎵 frutiger aero — amirthetrash</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#ffc0e8,#e060b0)"></div>🎵 Caramelldansen — Caramell</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#a0f060,#38a810)"></div>🎵 Deja Vu — Dave Rodgers</li>
+              <li><div class="af-orb" style="background:radial-gradient(circle at 35% 30%,#ffe090,#d8a020)"></div>🎵 Ready Steady Go — L'Arc~en~Ciel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ TAB: LINKS ══ -->
+      <div class="tab-pane" id="tab-links">
+        <div class="panel">
+          <div class="panel-header"><span class="panel-icon">🔗</span><span class="panel-title">FIND ME EVERYWHERE</span></div>
+          <div class="post-body" style="display:flex;flex-direction:column;gap:7px;">
+            <!-- ★ Change href and icon src for each row -->
+            <a href="#" class="rb-link-row">
+              <div class="rb-link-orb" style="background:radial-gradient(circle at 38% 32%,#b0e0ff,#5ab8f8);">
+                <img class="icon-img" src="https://bsky.app/static/apple-touch-icon.png" alt="bsky" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🦋</span>
+              </div>
+              <div style="flex:1;"><div class="rb-lk-name">BLUESKY</div><div class="rb-lk-sub">@yourhandle.bsky.social</div></div>
+              <span class="rb-lk-arrow">▶</span>
+            </a>
+
+            <a href="#" class="rb-link-row">
+              <div class="rb-link-orb" style="background:radial-gradient(circle at 38% 32%,#a0f068,#38a810);">
+                <img class="icon-img" src="https://storage.ko-fi.com/cdn/cup-border.png" alt="kofi" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">☕</span>
+              </div>
+              <div style="flex:1;"><div class="rb-lk-name">KO-FI</div><div class="rb-lk-sub">support my work!</div></div>
+              <span class="rb-lk-arrow">▶</span>
+            </a> 
+
+            <!-- NEO CITIES / NEKO WEB / PORTAFOLIO PERSONAL -->
+<a href="#" class="rb-link-row">
+  <div class="rb-link-orb" style="background:radial-gradient(circle at 38% 32%, #ffe066, #f5a623);">
+    <img class="icon-img" src="https://neocities.org/favicon.ico" alt="web" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🌐</span>
+  </div>
+  <div style="flex:1;"><div class="rb-lk-name">FOLLOW ME</div><div class="rb-lk-sub">starmoon.site</div></div>
+  <span class="rb-lk-arrow">▶</span>
+</a>
+
+<!-- GITHUB -->
+<a href="#" class="rb-link-row">
+  <div class="rb-link-orb" style="background:radial-gradient(circle at 38% 32%, #ffffff, #444444);">
+    <img class="icon-img" src="https://github.githubassets.com/favicons/favicon.svg" alt="github" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🐙</span>
+  </div>
+  <div style="flex:1;"><div class="rb-lk-name">GITHUB</div><div class="rb-lk-sub">@yourusername</div></div>
+  <span class="rb-lk-arrow">▶</span>
+</a>
+
+<!-- INSTAGRAM -->
+<a href="#" class="rb-link-row">
+  <div class="rb-link-orb" style="background: radial-gradient(circle at 38% 32%, #ffdd67, #ff3366 50%, #8a3ab9 90%);">
+    <img class="icon-img" src="https://unpkg.com/simple-icons@v11/icons/instagram.svg" alt="instagram" style="filter: invert(1);" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">📸</span>
+  </div>
+  <div style="flex:1;"><div class="rb-lk-name">INSTAGRAM</div><div class="rb-lk-sub">@yourusername</div></div>
+  <span class="rb-lk-arrow">▶</span>
+</a>
+
+<!-- PINTEREST / ARTSTATION / TUMBLR (Ejemplo con Pinterest por el color rojo) -->
+<a href="#" class="rb-link-row">
+  <div class="rb-link-orb" style="background:radial-gradient(circle at 38% 32%, #ff8595, #cc001b);">
+    <img class="icon-img" src="https://s.pinimg.com/favicon.ico" alt="pinterest" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">📌</span>
+  </div>
+  <div style="flex:1;"><div class="rb-lk-name">PINTEREST</div><div class="rb-lk-sub">visual moodboards</div></div>
+  <span class="rb-lk-arrow">▶</span>
+</a>
+
+            
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end main-col -->
+
+    <!-- ====== SIDEBAR ====== -->
+    <div class="sidebar">
+
+      <div class="panel profile-widget">
+        <div class="panel-header"><span class="panel-icon">💫</span><span class="panel-title">ABOUT ME</span></div>
+        <div class="panel-body" style="text-align:center;">
+          <!-- ★ Change src to your avatar -->
+          <div class="pw-avatar">
+            <img class="icon-img" src="avatar.jpg" alt="avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+            <span class="icon-fallback">🐱</span>
+          </div>
+          <div class="pw-name">YOUR NAME</div><!-- ★ change -->
+          <div class="pw-sub">she/her · 21 · artist ✦</div><!-- ★ change -->
+                    <div class="sidebar-marquee">
+            <marquee scrollamount="2">
+              ✦ artist ✦ dreamer ✦ pixel lover ✦ y2k ✦ soft girl ✦ she/her ✦
+            </marquee>
+          </div>
+          <!-- ★ Change href and src for each social button -->
+          <div class="pw-social">
+            <a href="#" class="pw-soc-btn"><img class="icon-img" src="https://bsky.app/static/apple-touch-icon.png" alt="bsky" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">🦋</span></a>
+            
+            <a href="#" class="pw-soc-btn"><img class="icon-img" src="https://storage.ko-fi.com/cdn/cup-border.png" alt="kofi" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><span class="icon-fallback">☕</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon">🌙</span><span class="panel-title">A LITTLE BIT</span></div>
+        <div class="panel-body">
+          <p class="about-desc">hi!! i'm a digital artist and game lover. i use this blog to share my art, thoughts, and obsessions ♡</p><!-- ★ change -->
+          
+          <ul class="about-list-sb">
+            <li>🎮 currently playing: .hack//</li>
+            <li>📚 reading: Vampire Knight</li>
+            <li>🎵 obsessed with: eurobeat</li>
+            <li>🌸 mood: ✨ cozy vibes ✨</li>
+          </ul>
+          
+        </div>
+      </div>
+
+      <!-- ★ Music player — change SC URL and track name -->
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon">🎵</span><span class="panel-title">NOW PLAYING</span></div>
+        <div class="player-body">
+          <iframe id="sc-player-rb"
+            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/ekaterina-chernova-330213868/amirthetrash-frutiger-aero&auto_play=true&hide_related=true&show_comments=false&show_user=false&visual=false"
+            width="1" height="1" style="position:absolute;opacity:0;pointer-events:none;" allow="autoplay"></iframe>
+          <div class="rb-track" id="rb-track">♪ frutiger aero — amirthetrash</div><!-- ★ change -->
+          <div class="rb-artist">now playing~</div>
+          <div class="rb-controls">
+            <div class="rb-disc" id="rb-disc"></div>
+            <div class="rb-btn"  id="rb-btn">▶</div>
+            <div class="rb-bars" id="rb-bars">
+              <div class="rb-bar"></div><div class="rb-bar"></div>
+              <div class="rb-bar"></div><div class="rb-bar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon"></span><span class="panel-title">CATEGORIES</span></div>
+        <div class="panel-body">
+          <div class="cat-list">
+            <a href="#" class="cat-item"><div class="cat-dot" style="background:radial-gradient(circle at 35% 30%,#ffc0e8,#e060b0)"></div><span class="cat-name">✿ Art</span><span class="cat-count">18</span></a>
+            <a href="#" class="cat-item"><div class="cat-dot" style="background:radial-gradient(circle at 35% 30%,#a0d8ff,#3090e0)"></div><span class="cat-name">🎮 Gaming</span><span class="cat-count">12</span></a>
+            <a href="#" class="cat-item"><div class="cat-dot" style="background:radial-gradient(circle at 35% 30%,#a0f060,#38a810)"></div><span class="cat-name">🌸 Diary</span><span class="cat-count">9</span></a>
+            <a href="#" class="cat-item"><div class="cat-dot" style="background:radial-gradient(circle at 35% 30%,#ffe080,#d8b020)"></div><span class="cat-name">🎵 Music</span><span class="cat-count">3</span></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon">⏱</span><span class="panel-title">RECENT</span></div>
+        <div class="panel-body">
+          <ul class="recent-list">
+            <li class="recent-item"><span class="recent-icon">🎨</span><div class="recent-info"><span class="recent-title-el">new character design done!</span><span class="recent-date">Jun 14</span></div></li>
+            <li class="recent-item"><span class="recent-icon">🎮</span><div class="recent-info"><span class="recent-title-el">.hack// playthrough pt1</span><span class="recent-date">Jun 10</span></div></li>
+            <li class="recent-item"><span class="recent-icon">🌸</span><div class="recent-info"><span class="recent-title-el">june goals + reading list</span><span class="recent-date">Jun 5</span></div></li>
+            <li class="recent-item"><span class="recent-icon">🎵</span><div class="recent-info"><span class="recent-title-el">my fave eurobeat tracks</span><span class="recent-date">May 30</span></div></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon">👁</span><span class="panel-title">VISITORS</span></div>
+        <div class="counter-wrap">
+          <span class="counter-num">001337</span>
+          <div class="counter-label">you are visitor #001337! ♡</div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header"><span class="panel-icon"></span><span class="panel-title">TAGS</span></div>
+        <div class="panel-body">
+          <div class="tag-cloud">
+            <a href="#" class="tag-pill">#pixelart</a>
+            <a href="#" class="tag-pill">#y2k</a>
+            <a href="#" class="tag-pill">#oc</a>
+            <a href="#" class="tag-pill">#gaming</a>
+            <a href="#" class="tag-pill">#anime</a>
+            <a href="#" class="tag-pill">#kawaii</a>
+            <a href="#" class="tag-pill">#retro</a>
+            <a href="#" class="tag-pill">#eurobeat</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end sidebar -->
+  </div><!-- end two-col -->
+
+  <div class="site-footer">
+    <div class="footer-copy">© MY BLOG · ALL RIGHTS RESERVED</div><!-- ★ change -->
+
+    <div class="footer-made">made with ♡ by <a href="https://vgen.co/grevaleart" target="_blank">Grecia V.</a></div><!-- ★ do not change -->
+  </div>
+
+</div><!-- end .site-wrap -->
+
+<!-- SoundCloud API + your scripts -->
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script src="retro-blog-script.js"></script>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <span class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="full size">
+</div>
+
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <span class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''">✕</span>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="full size">
+</div>
+
+</body>
+</html>
